@@ -1,6 +1,6 @@
 #!/usr/bin/env nu
 
-def main [folk_file: string] {
+def main [folk_file: string, google_file: string] {
     let table = open $folk_file
 
     # Split emails into separate columns
@@ -76,7 +76,7 @@ def main [folk_file: string] {
 
     let out = $join_table | merge $reference_table
 
-    $out | to csv | save -f "contacts.csv"
+    $out | to csv | save -f $google_file
 }
 
 

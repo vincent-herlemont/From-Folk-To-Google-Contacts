@@ -10,5 +10,5 @@ Pre-requisites:
 ## Usage
 
 ```bash
-nu script.nu "folk_export.csv"
+nu script.nu "folk_export.csv" "google_contacts.csv"
 ```
